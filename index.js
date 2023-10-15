@@ -16,10 +16,13 @@ function getNewHitNumber(){
 
 var timer = 30;
 function runTimer(){
+  let mySound = new Audio('musics/opening-bubble.mp3')
+      mySound.play();
   var timeInterval = setInterval(function(){
     if(timer>0){
       timer--;
       document.querySelector('.timer').innerHTML = timer;
+      
     }
     else{
       clearInterval();
@@ -43,7 +46,13 @@ document.querySelector('.bottom-pannel').addEventListener("click",function(detai
   if(clickedNumber === hitRandomNumber){
     increaseScore();
     getNewHitNumber();
-    makeBuble(); 
+    makeBuble();
+    let mySound = new Audio('musics/bubble-sound.mp3')
+    mySound.play();
+  }
+  else{
+    let mySound = new Audio('musics/error-sound.mp3')
+    mySound.play();
   }
 });
 
