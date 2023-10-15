@@ -1,7 +1,7 @@
 
 function makeBuble(){
   var bubbles = '';
-  for(var i=0; i<200; i++){
+  for(var i=0; i<176; i++){
     var randomNumber = Math.floor(Math.random()*10);
     bubbles += `<div class="bubble">${randomNumber}</div>`;
   }
